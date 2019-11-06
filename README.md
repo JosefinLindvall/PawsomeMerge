@@ -1,4 +1,4 @@
 # projectPawsome
 
-En applikation som underlättar hanteringen av data för sin hund.
-Applikationen ska fungera för iphone 8 och nyare versioner.
+An application which will ease the management of data about a persons dog.
+The application will work for iphone 8 and newer versions.
