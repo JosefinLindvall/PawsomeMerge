@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Notes View Controller-->
+        <!--Notes-->
         <scene sceneID="fuh-ba-pEn">
             <objects>
                 <viewController id="haL-ii-fod" customClass="NotesViewController" customModule="Pawsome" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13e-G4-iqs">
-                                <rect key="frame" x="20" y="263" width="177" height="148"/>
+                                <rect key="frame" x="20" y="263" width="177" height="222"/>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Medicalcare"/>
@@ -25,7 +25,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHj-qd-i4G">
-                                <rect key="frame" x="217" y="263" width="177" height="148"/>
+                                <rect key="frame" x="217" y="263" width="177" height="222"/>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Healthcare"/>
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcE-vY-hB3">
-                                <rect key="frame" x="217" y="539" width="177" height="148"/>
+                                <rect key="frame" x="217" y="505" width="177" height="222"/>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Other"/>
@@ -43,7 +43,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsd-V0-K1b">
-                                <rect key="frame" x="20" y="539" width="177" height="148"/>
+                                <rect key="frame" x="20" y="505" width="177" height="222"/>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Activities"/>
@@ -51,20 +51,29 @@
                                     <segue destination="IpI-dh-RzW" kind="show" id="DS4-Hh-Hdy"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7W-67-8mU">
+                                <rect key="frame" x="20" y="108" width="374" height="135"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="jsd-V0-K1b" firstAttribute="top" secondItem="13e-G4-iqs" secondAttribute="bottom" constant="128" id="49K-pl-6mO"/>
+                            <constraint firstItem="jsd-V0-K1b" firstAttribute="top" secondItem="13e-G4-iqs" secondAttribute="bottom" constant="20" id="49K-pl-6mO"/>
                             <constraint firstItem="jsd-V0-K1b" firstAttribute="height" secondItem="BcE-vY-hB3" secondAttribute="height" id="6Ag-P4-fuR"/>
                             <constraint firstItem="BcE-vY-hB3" firstAttribute="width" secondItem="eHj-qd-i4G" secondAttribute="width" id="DQV-vG-B6S"/>
-                            <constraint firstItem="BcE-vY-hB3" firstAttribute="top" secondItem="eHj-qd-i4G" secondAttribute="bottom" constant="128" id="KAu-EI-gqB"/>
+                            <constraint firstItem="q7W-67-8mU" firstAttribute="top" secondItem="MbN-YP-KHS" secondAttribute="top" constant="20" id="Frq-ho-MQW"/>
+                            <constraint firstItem="q7W-67-8mU" firstAttribute="leading" secondItem="MbN-YP-KHS" secondAttribute="leading" constant="20" id="Gsg-Ba-C3E"/>
+                            <constraint firstItem="BcE-vY-hB3" firstAttribute="top" secondItem="eHj-qd-i4G" secondAttribute="bottom" constant="20" id="KAu-EI-gqB"/>
+                            <constraint firstItem="13e-G4-iqs" firstAttribute="top" secondItem="q7W-67-8mU" secondAttribute="bottom" constant="20" id="M3l-nn-UUj"/>
                             <constraint firstItem="BcE-vY-hB3" firstAttribute="leading" secondItem="jsd-V0-K1b" secondAttribute="trailing" constant="20" id="Ndo-S2-Bv1"/>
                             <constraint firstItem="BcE-vY-hB3" firstAttribute="height" secondItem="eHj-qd-i4G" secondAttribute="height" id="Nkm-0L-WAy"/>
-                            <constraint firstItem="13e-G4-iqs" firstAttribute="top" secondItem="MbN-YP-KHS" secondAttribute="top" constant="175" id="S48-O2-V0Y"/>
-                            <constraint firstItem="MbN-YP-KHS" firstAttribute="bottom" secondItem="BcE-vY-hB3" secondAttribute="bottom" constant="175" id="YSi-9v-OYQ"/>
+                            <constraint firstItem="MbN-YP-KHS" firstAttribute="trailing" secondItem="q7W-67-8mU" secondAttribute="trailing" constant="20" id="SPa-3E-bCX"/>
+                            <constraint firstItem="MbN-YP-KHS" firstAttribute="bottom" secondItem="BcE-vY-hB3" secondAttribute="bottom" constant="135" id="YSi-9v-OYQ"/>
                             <constraint firstItem="MbN-YP-KHS" firstAttribute="trailing" secondItem="eHj-qd-i4G" secondAttribute="trailing" constant="20" id="apQ-Pu-RM8"/>
                             <constraint firstItem="13e-G4-iqs" firstAttribute="leading" secondItem="MbN-YP-KHS" secondAttribute="leading" constant="20" id="c3c-QD-eFd"/>
-                            <constraint firstItem="MbN-YP-KHS" firstAttribute="bottom" secondItem="jsd-V0-K1b" secondAttribute="bottom" constant="175" id="gJS-ag-3RG"/>
+                            <constraint firstItem="MbN-YP-KHS" firstAttribute="bottom" secondItem="jsd-V0-K1b" secondAttribute="bottom" constant="135" id="gJS-ag-3RG"/>
                             <constraint firstItem="eHj-qd-i4G" firstAttribute="height" secondItem="13e-G4-iqs" secondAttribute="height" id="hq6-k9-o0Q"/>
                             <constraint firstItem="jsd-V0-K1b" firstAttribute="width" secondItem="BcE-vY-hB3" secondAttribute="width" id="tBx-5P-Q1N"/>
                             <constraint firstItem="MbN-YP-KHS" firstAttribute="trailing" secondItem="BcE-vY-hB3" secondAttribute="trailing" constant="20" id="tdc-kl-aB4"/>
@@ -74,13 +83,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MbN-YP-KHS"/>
                     </view>
-                    <navigationItem key="navigationItem" id="xnl-il-qvY"/>
+                    <navigationItem key="navigationItem" title="Notes" id="xnl-il-qvY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bcv-ZJ-b2E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="992.75362318840587" y="130.58035714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--SpecificNoteCategory-->
         <scene sceneID="VGD-5f-ghh">
             <objects>
                 <viewController id="IpI-dh-RzW" sceneMemberID="viewController">
@@ -90,7 +99,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="0m5-eB-RSo"/>
                     </view>
-                    <navigationItem key="navigationItem" id="us2-t9-sgQ"/>
+                    <navigationItem key="navigationItem" title="SpecificNoteCategory" id="us2-t9-sgQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y58-5h-ne9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
