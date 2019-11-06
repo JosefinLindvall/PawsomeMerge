@@ -1,15 +1,15 @@
 //
-//  PawesomeTests.swift
-//  PawesomeTests
+//  PawsomeTests.swift
+//  PawsomeTests
 //
 //  Created by Kim Berg on 2019-11-05.
 //  Copyright © 2019 ProjectGroupM. All rights reserved.
 //
 
 import XCTest
-@testable import Pawesome
+@testable import Pawsome
 
-class PawesomeTests: XCTestCase {
+class PawsomeTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

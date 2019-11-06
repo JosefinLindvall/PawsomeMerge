@@ -1,6 +1,6 @@
 //
-//  PawesomeUITests.swift
-//  PawesomeUITests
+//  PawsomeUITests.swift
+//  PawsomeUITests
 //
 //  Created by Kim Berg on 2019-11-05.
 //  Copyright © 2019 ProjectGroupM. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class PawesomeUITests: XCTestCase {
+class PawsomeUITests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

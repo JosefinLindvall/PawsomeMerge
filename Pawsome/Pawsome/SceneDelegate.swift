@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  Pawesome
+//  Pawsome
 //
 //  Created by Kim Berg on 2019-11-05.
 //  Copyright © 2019 ProjectGroupM. All rights reserved.
