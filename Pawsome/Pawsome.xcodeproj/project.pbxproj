@@ -10,6 +10,7 @@
 		1845ECAE237309ED005B6102 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1845ECAD237309ED005B6102 /* Profile.storyboard */; };
 		1845ECB0237309F8005B6102 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1845ECAF237309F8005B6102 /* Notes.storyboard */; };
 		1845ECB223730A07005B6102 /* Services.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1845ECB123730A07005B6102 /* Services.storyboard */; };
+		1845ECB4237312E2005B6102 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1845ECB3237312E2005B6102 /* NotesViewController.swift */; };
 		18B41510237194F400549C13 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B4150F237194F400549C13 /* AppDelegate.swift */; };
 		18B41512237194F400549C13 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B41511237194F400549C13 /* SceneDelegate.swift */; };
 		18B41514237194F400549C13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B41513237194F400549C13 /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 		1845ECAD237309ED005B6102 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		1845ECAF237309F8005B6102 /* Notes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		1845ECB123730A07005B6102 /* Services.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Services.storyboard; sourceTree = "<group>"; };
+		1845ECB3237312E2005B6102 /* NotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		18B4150C237194F400549C13 /* Pawsome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pawsome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B4150F237194F400549C13 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18B41511237194F400549C13 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				18B41518237194F400549C13 /* Pawsome.xcdatamodeld */,
 				1845ECAD237309ED005B6102 /* Profile.storyboard */,
 				1845ECB123730A07005B6102 /* Services.storyboard */,
+				1845ECB3237312E2005B6102 /* NotesViewController.swift */,
 			);
 			path = Pawsome;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18B4151A237194F400549C13 /* Pawsome.xcdatamodeld in Sources */,
+				1845ECB4237312E2005B6102 /* NotesViewController.swift in Sources */,
 				18B41514237194F400549C13 /* ViewController.swift in Sources */,
 				18B41510237194F400549C13 /* AppDelegate.swift in Sources */,
 				18B41512237194F400549C13 /* SceneDelegate.swift in Sources */,
