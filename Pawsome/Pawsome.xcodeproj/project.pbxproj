@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		183A68E0237584D0003F9781 /* NotesOfDetailedCategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A68DF237584D0003F9781 /* NotesOfDetailedCategoryTableViewController.swift */; };
 		1845ECAE237309ED005B6102 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1845ECAD237309ED005B6102 /* Profile.storyboard */; };
 		1845ECB0237309F8005B6102 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1845ECAF237309F8005B6102 /* Notes.storyboard */; };
 		1845ECB223730A07005B6102 /* Services.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1845ECB123730A07005B6102 /* Services.storyboard */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		183A68DF237584D0003F9781 /* NotesOfDetailedCategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesOfDetailedCategoryTableViewController.swift; sourceTree = "<group>"; };
 		1845ECAD237309ED005B6102 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		1845ECAF237309F8005B6102 /* Notes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 		1845ECB123730A07005B6102 /* Services.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Services.storyboard; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				1845ECAD237309ED005B6102 /* Profile.storyboard */,
 				1845ECB123730A07005B6102 /* Services.storyboard */,
 				1845ECB3237312E2005B6102 /* NotesViewController.swift */,
+				183A68DF237584D0003F9781 /* NotesOfDetailedCategoryTableViewController.swift */,
 			);
 			path = Pawsome;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			files = (
 				18B4151A237194F400549C13 /* Pawsome.xcdatamodeld in Sources */,
 				1845ECB4237312E2005B6102 /* NotesViewController.swift in Sources */,
+				183A68E0237584D0003F9781 /* NotesOfDetailedCategoryTableViewController.swift in Sources */,
 				18B41514237194F400549C13 /* ViewController.swift in Sources */,
 				18B41510237194F400549C13 /* AppDelegate.swift in Sources */,
 				18B41512237194F400549C13 /* SceneDelegate.swift in Sources */,

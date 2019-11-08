@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +21,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Medicalcare"/>
                                 <connections>
-                                    <segue destination="IpI-dh-RzW" kind="show" id="HIg-56-mAl"/>
+                                    <segue destination="tF3-Zr-7jD" kind="show" identifier="medicalCareSegue" id="AR0-Sc-9Bp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHj-qd-i4G">
@@ -30,7 +30,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Healthcare"/>
                                 <connections>
-                                    <segue destination="IpI-dh-RzW" kind="show" id="G6J-qw-VX5"/>
+                                    <segue destination="tF3-Zr-7jD" kind="show" identifier="healthCareSegue" id="YpR-1u-umU"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcE-vY-hB3">
@@ -39,7 +39,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Other"/>
                                 <connections>
-                                    <segue destination="IpI-dh-RzW" kind="show" id="HqS-8M-fCI"/>
+                                    <segue destination="tF3-Zr-7jD" kind="show" identifier="otherSegue" id="ezN-m1-qRH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsd-V0-K1b">
@@ -48,7 +48,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Activities"/>
                                 <connections>
-                                    <segue destination="IpI-dh-RzW" kind="show" id="DS4-Hh-Hdy"/>
+                                    <segue destination="tF3-Zr-7jD" kind="show" identifier="activitiesSegue" id="5GB-jb-967"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7W-67-8mU">
@@ -89,21 +89,54 @@
             </objects>
             <point key="canvasLocation" x="992.75362318840587" y="130.58035714285714"/>
         </scene>
-        <!--SpecificNoteCategory-->
-        <scene sceneID="VGD-5f-ghh">
+        <!--Notes Of Detailed Category Table View Controller-->
+        <scene sceneID="hOr-Tj-eNy">
             <objects>
-                <viewController id="IpI-dh-RzW" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Jjq-uL-2w0">
+                <tableViewController id="tF3-Zr-7jD" customClass="NotesOfDetailedCategoryTableViewController" customModule="Pawsome" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2Gr-7E-Ayv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="0m5-eB-RSo"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="SpecificNoteCategory" id="us2-t9-sgQ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y58-5h-ne9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="55" id="YS7-4j-eKn">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YS7-4j-eKn" id="CnB-AK-AhA">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Ks4-Yu-OUN">
+                                            <rect key="frame" x="20" y="5" width="100" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="D0f-Em-Fia">
+                                            <rect key="frame" x="128" y="5" width="100" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tF3-Zr-7jD" id="vEn-M6-VX1"/>
+                            <outlet property="delegate" destination="tF3-Zr-7jD" id="qzq-0V-Wnc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="NHf-od-Wqh"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="D0f-Em-Fia" id="jOi-j5-ro8"/>
+                        <outlet property="titleLabel" destination="Ks4-Yu-OUN" id="ce2-pQ-BeD"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5eo-cx-7O5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1894" y="131"/>
+            <point key="canvasLocation" x="1869.5652173913045" y="130.58035714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TEi-nm-7gS">
@@ -125,6 +158,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HIg-56-mAl"/>
+        <segue reference="ezN-m1-qRH"/>
     </inferredMetricsTieBreakers>
 </document>
