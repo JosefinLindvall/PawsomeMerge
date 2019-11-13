@@ -19,6 +19,8 @@
 		18B4151F237194F500549C13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B4151D237194F500549C13 /* LaunchScreen.storyboard */; };
 		18B4152A237194F500549C13 /* PawsomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B41529237194F500549C13 /* PawsomeTests.swift */; };
 		18B41535237194F500549C13 /* PawsomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B41534237194F500549C13 /* PawsomeUITests.swift */; };
+		713D3B6D23771609008BD5EA /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713D3B6C23771609008BD5EA /* EditProfileViewController.swift */; };
+		713D3B6F23772BA8008BD5EA /* DogProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713D3B6E23772BA8008BD5EA /* DogProfile.swift */; };
 		71DB4ACB23732581004ABF00 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DB4ACA23732581004ABF00 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,8 @@
 		18B41530237194F500549C13 /* PawsomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PawsomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B41534237194F500549C13 /* PawsomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawsomeUITests.swift; sourceTree = "<group>"; };
 		18B41536237194F500549C13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		713D3B6C23771609008BD5EA /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		713D3B6E23772BA8008BD5EA /* DogProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfile.swift; sourceTree = "<group>"; };
 		71DB4ACA23732581004ABF00 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +125,8 @@
 				1845ECAD237309ED005B6102 /* Profile.storyboard */,
 				1845ECB123730A07005B6102 /* Services.storyboard */,
 				71DB4ACA23732581004ABF00 /* ProfileViewController.swift */,
+				713D3B6C23771609008BD5EA /* EditProfileViewController.swift */,
+				713D3B6E23772BA8008BD5EA /* DogProfile.swift */,
 			);
 			path = Pawsome;
 			sourceTree = "<group>";
@@ -279,9 +285,11 @@
 			files = (
 				18B4151A237194F400549C13 /* Pawsome.xcdatamodeld in Sources */,
 				18B41514237194F400549C13 /* ViewController.swift in Sources */,
+				713D3B6D23771609008BD5EA /* EditProfileViewController.swift in Sources */,
 				71DB4ACB23732581004ABF00 /* ProfileViewController.swift in Sources */,
 				18B41510237194F400549C13 /* AppDelegate.swift in Sources */,
 				18B41512237194F400549C13 /* SceneDelegate.swift in Sources */,
+				713D3B6F23772BA8008BD5EA /* DogProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
