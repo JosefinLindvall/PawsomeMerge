@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cgp-6H-eMR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cgp-6H-eMR">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Storyboard Reference-->
+        <!--Notes-->
         <scene sceneID="eok-rS-hU1">
             <objects>
-                <viewControllerPlaceholder id="1LT-Gg-At5" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Notes" id="1LT-Gg-At5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="pU5-mn-De4"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="41l-Gf-IsD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="509" y="76"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--Profile-->
         <scene sceneID="wPR-L5-UlJ">
             <objects>
-                <viewControllerPlaceholder id="XMe-2o-hXG" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GRp-Vs-9HM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Profile" id="XMe-2o-hXG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="DVP-Mg-g4C"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GRp-Vs-9HM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="509" y="246"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--Services-->
         <scene sceneID="pbM-WF-kfv">
             <objects>
-                <viewControllerPlaceholder id="1hG-mR-SZO" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V1Y-O6-lux" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Services" id="1hG-mR-SZO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="9d5-Qd-h6Y"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="V1Y-O6-lux" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="509" y="418"/>
         </scene>
@@ -41,7 +41,8 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="cgp-6H-eMR" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dsx-8V-al0">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionIndicatorImage="pencil" catalog="system" id="dsx-8V-al0">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -56,4 +57,7 @@
             <point key="canvasLocation" x="-313" y="246"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pencil" catalog="system" width="64" height="58"/>
+    </resources>
 </document>

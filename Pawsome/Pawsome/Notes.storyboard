@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zd1-Xc-7Oa">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +21,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Medicalcare"/>
                                 <connections>
-                                    <segue destination="tF3-Zr-7jD" kind="show" identifier="medicalCareSegue" id="AR0-Sc-9Bp"/>
+                                    <action selector="clickedMedicalcare:" destination="haL-ii-fod" eventType="touchUpInside" id="htq-RW-JLO"/>
+                                    <segue destination="tF3-Zr-7jD" kind="show" identifier="segueToNotesOfDetailedView" id="AR0-Sc-9Bp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHj-qd-i4G">
@@ -30,7 +31,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Healthcare"/>
                                 <connections>
-                                    <segue destination="tF3-Zr-7jD" kind="show" identifier="healthCareSegue" id="YpR-1u-umU"/>
+                                    <action selector="clickedHealthcare:" destination="haL-ii-fod" eventType="touchUpInside" id="12T-jL-L3c"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcE-vY-hB3">
@@ -39,7 +40,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Other"/>
                                 <connections>
-                                    <segue destination="tF3-Zr-7jD" kind="show" identifier="otherSegue" id="ezN-m1-qRH"/>
+                                    <action selector="clickedOther:" destination="haL-ii-fod" eventType="touchUpInside" id="LbM-Zm-G0t"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsd-V0-K1b">
@@ -48,7 +49,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Activities"/>
                                 <connections>
-                                    <segue destination="tF3-Zr-7jD" kind="show" identifier="activitiesSegue" id="5GB-jb-967"/>
+                                    <action selector="clickedActivities:" destination="haL-ii-fod" eventType="touchUpInside" id="jcH-Nf-Rq0"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7W-67-8mU">
@@ -98,29 +99,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="55" id="YS7-4j-eKn">
-                                <rect key="frame" x="0.0" y="28" width="414" height="55"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="YS7-4j-eKn" customClass="NotesCellOfDetailedCategoryTableViewCell" customModule="Pawsome" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YS7-4j-eKn" id="CnB-AK-AhA">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Ks4-Yu-OUN">
-                                            <rect key="frame" x="20" y="5" width="100" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Ks4-Yu-OUN">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="D0f-Em-Fia">
-                                            <rect key="frame" x="128" y="5" width="100" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="D0f-Em-Fia">
+                                            <rect key="frame" x="0.0" y="50" width="414" height="50"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Ks4-Yu-OUN" firstAttribute="top" secondItem="CnB-AK-AhA" secondAttribute="top" id="2ji-1r-iHO"/>
+                                        <constraint firstItem="D0f-Em-Fia" firstAttribute="top" secondItem="Ks4-Yu-OUN" secondAttribute="bottom" id="H9h-mI-B2M"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ks4-Yu-OUN" secondAttribute="trailing" id="IXp-Vj-8yc"/>
+                                        <constraint firstItem="D0f-Em-Fia" firstAttribute="top" secondItem="Ks4-Yu-OUN" secondAttribute="bottom" id="Q2P-tB-SWD"/>
+                                        <constraint firstItem="D0f-Em-Fia" firstAttribute="height" secondItem="Ks4-Yu-OUN" secondAttribute="height" id="g0L-tD-Gg5"/>
+                                        <constraint firstAttribute="trailing" secondItem="D0f-Em-Fia" secondAttribute="trailing" id="hnw-vv-2MZ"/>
+                                        <constraint firstItem="D0f-Em-Fia" firstAttribute="leading" secondItem="CnB-AK-AhA" secondAttribute="leading" id="qlc-Qi-fWW"/>
+                                        <constraint firstItem="Ks4-Yu-OUN" firstAttribute="leading" secondItem="CnB-AK-AhA" secondAttribute="leading" id="qxA-kV-R8V"/>
+                                        <constraint firstAttribute="bottom" secondItem="D0f-Em-Fia" secondAttribute="bottom" id="ul0-GV-Tgg"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="D0f-Em-Fia" id="c3K-TA-JeO"/>
+                                    <outlet property="titleLabel" destination="Ks4-Yu-OUN" id="2ob-83-4zl"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -129,10 +143,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="NHf-od-Wqh"/>
-                    <connections>
-                        <outlet property="dateLabel" destination="D0f-Em-Fia" id="jOi-j5-ro8"/>
-                        <outlet property="titleLabel" destination="Ks4-Yu-OUN" id="ce2-pQ-BeD"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5eo-cx-7O5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,7 +167,4 @@
             <point key="canvasLocation" x="82.608695652173921" y="130.58035714285714"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="ezN-m1-qRH"/>
-    </inferredMetricsTieBreakers>
 </document>

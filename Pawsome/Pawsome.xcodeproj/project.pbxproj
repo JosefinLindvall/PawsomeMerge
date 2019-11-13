@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1801CD9C2375BAA700B1B39A /* NotesCellOfDetailedCategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1801CD9B2375BAA700B1B39A /* NotesCellOfDetailedCategoryTableViewCell.swift */; };
 		183A68E0237584D0003F9781 /* NotesOfDetailedCategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A68DF237584D0003F9781 /* NotesOfDetailedCategoryTableViewController.swift */; };
 		1845ECAE237309ED005B6102 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1845ECAD237309ED005B6102 /* Profile.storyboard */; };
 		1845ECB0237309F8005B6102 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1845ECAF237309F8005B6102 /* Notes.storyboard */; };
@@ -21,6 +22,7 @@
 		18B4151F237194F500549C13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18B4151D237194F500549C13 /* LaunchScreen.storyboard */; };
 		18B4152A237194F500549C13 /* PawsomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B41529237194F500549C13 /* PawsomeTests.swift */; };
 		18B41535237194F500549C13 /* PawsomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B41534237194F500549C13 /* PawsomeUITests.swift */; };
+		18DA19E0237C3D0E00699AAA /* notesCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DA19DF237C3D0E00699AAA /* notesCategories.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1801CD9B2375BAA700B1B39A /* NotesCellOfDetailedCategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCellOfDetailedCategoryTableViewCell.swift; sourceTree = "<group>"; };
 		183A68DF237584D0003F9781 /* NotesOfDetailedCategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesOfDetailedCategoryTableViewController.swift; sourceTree = "<group>"; };
 		1845ECAD237309ED005B6102 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		1845ECAF237309F8005B6102 /* Notes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
@@ -61,6 +64,7 @@
 		18B41530237194F500549C13 /* PawsomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PawsomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B41534237194F500549C13 /* PawsomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawsomeUITests.swift; sourceTree = "<group>"; };
 		18B41536237194F500549C13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18DA19DF237C3D0E00699AAA /* notesCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notesCategories.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,8 @@
 				1845ECB123730A07005B6102 /* Services.storyboard */,
 				1845ECB3237312E2005B6102 /* NotesViewController.swift */,
 				183A68DF237584D0003F9781 /* NotesOfDetailedCategoryTableViewController.swift */,
+				1801CD9B2375BAA700B1B39A /* NotesCellOfDetailedCategoryTableViewCell.swift */,
+				18DA19DF237C3D0E00699AAA /* notesCategories.swift */,
 			);
 			path = Pawsome;
 			sourceTree = "<group>";
@@ -284,6 +290,8 @@
 				1845ECB4237312E2005B6102 /* NotesViewController.swift in Sources */,
 				183A68E0237584D0003F9781 /* NotesOfDetailedCategoryTableViewController.swift in Sources */,
 				18B41514237194F400549C13 /* ViewController.swift in Sources */,
+				1801CD9C2375BAA700B1B39A /* NotesCellOfDetailedCategoryTableViewCell.swift in Sources */,
+				18DA19E0237C3D0E00699AAA /* notesCategories.swift in Sources */,
 				18B41510237194F400549C13 /* AppDelegate.swift in Sources */,
 				18B41512237194F400549C13 /* SceneDelegate.swift in Sources */,
 			);
