@@ -42,14 +42,6 @@ class NotesViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    
-    @IBAction func clickedMedicalcare(_ sender: UIButton) {
-        
-        performSegue(withIdentifier: "segueToNotesOfDetailedView", sender: sender)
-            
-    }
-    
     @IBAction func clickedHealthcare(_ sender: UIButton) {
         
         performSegue(withIdentifier: "segueToNotesOfDetailedView", sender: sender)
