@@ -13,19 +13,24 @@ class cellInServicesTable : UITableViewCell
      
     @IBOutlet weak var upperHalfOfCellView: UIView!
     
-    
     @IBOutlet weak var lowerHalfOfCellView: UIView!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var telephoneNumberLabel: UILabel!
+    
+    @IBOutlet weak var serviceImage: UIImageView!
+    
+    @IBOutlet weak var phoneImage: UIImageView!
     
      override func awakeFromNib()
      {
          super.awakeFromNib()
-         // Initialization code
      }
 
      override func setSelected(_ selected: Bool, animated: Bool)
      {
          super.setSelected(selected, animated: animated)
 
-         // Configure the view for the selected state
      }
 }

@@ -10,11 +10,11 @@ import UIKit
 
 class ServicesTableViewController: UITableViewController
 {
-    
-    var Services : [[Any]] = []
-    var Veterinarians = [Service]()
-    var DogSitters = [Service]()
-    var DogGroomers = [Service]()
+    var services = [[Service]]() //Array containing arrays that in turn contain elements of class Service
+    var ServicesOptional : [[Any]] = []
+    var veterinarians = [Service]()
+    var dogSitters = [Service]()
+    var dogGroomers = [Service]()
     
     var headersForSections = ["Veterinarians" , "Dog sitters" , "Dog groomers"]
     
@@ -31,26 +31,28 @@ class ServicesTableViewController: UITableViewController
         
         // Putting in the data (fetch data differently later on)
         
-        Veterinarians.append(Service (name : "Vet Kelly" , telephoneNumber : "12345678910" , address : "Paw street 20" , linkToWebsite : "www.kelly.com" ))
-        DogSitters.append(Service (name : "Bruno the dog sitter" , telephoneNumber : "12345678910" , address : "Tail street 20" , linkToWebsite : "www.bruno.com" ))
-        DogGroomers.append(Service (name : "Sara the groomer" , telephoneNumber : "12345678910" , address : "Fur street 20" , linkToWebsite : "www.sara.com" ))
+        veterinarians.append(Service (name : "Vet Kelly" , telephoneNumber : "12345678910" , address : "Paw street 20" , linkToWebsite : "www.kelly.com" ))
+        dogSitters.append(Service (name : "Bruno the dog sitter" , telephoneNumber : "12345678910" , address : "Tail street 20" , linkToWebsite : "www.bruno.com" ))
+        dogGroomers.append(Service (name : "Sara the groomer" , telephoneNumber : "12345678910" , address : "Fur street 20" , linkToWebsite : "www.sara.com" ))
 
         
-        Services = [Veterinarians, DogSitters, DogGroomers]
+        services = [veterinarians, dogSitters, dogGroomers]
+        print(services.count)
+        print(services[0])
     }
     
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
     override func numberOfSections(in tableView: UITableView) -> Int
         {
-            return 3
+            return services.count
         }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
         {
-            return Services[section].count
+            return services[section].count
         }
 
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -58,12 +60,11 @@ class ServicesTableViewController: UITableViewController
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellInServicesTable", for: indexPath) as! cellInServicesTable
+            
+            let currentElementInServicesArray = services[indexPath.section][indexPath.row]
+            cell.nameLabel.text = currentElementInServicesArray.name
+            cell.telephoneNumberLabel.text = currentElementInServicesArray.telephoneNumber
 
-            if let currentElement = Services[indexPath.section][indexPath.row] as? Service
-            {
-                cell.
-            }
-        
 
             return cell
         }
@@ -80,35 +81,27 @@ class ServicesTableViewController: UITableViewController
    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         
-        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            performSegue(withIdentifier: "segueToServiceDetailController", sender: indexPath)
+        override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+        {
+            performSegue(withIdentifier: "segueToServiceDetailViewController", sender: indexPath) // Function performSegue will call function "prepare for segue" below
+            
         }
         
       
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) //HÄR E DUUUUUU
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?)
         {
             
-           if segue.identifier == "segueToExperienceDetailViewController" ,
-              let segueTo =  segue.destination as? ExperienceDetailViewController ,
+           if segue.identifier == "segueToServiceDetailViewController" ,
+              let segueTo =  segue.destination as? ServiceDetailViewController ,
               let index = sender as? IndexPath
            {
-              // perform custom segue operation:
-            
-                if let work = Experience[index.section][index.row] as? Work
-                {
-                    segueTo.work = work
-                    
-                }
-                
-                if let education = Experience[index.section][index.row] as? Education
-                {
-                    segueTo.education = education
-                }
-            
-            }
-        }
+                let service = services[index.section][index.row]
+                segueTo.service = service
+                            
+           }
+         }
         
         
         
