@@ -11,23 +11,29 @@ import UIKit
 class SpecificNoteViewController: UIViewController {
 
     @IBOutlet weak var titleNavbar: UINavigationItem!
-
     @IBOutlet weak var titleLbl: UILabel!
-    
     @IBOutlet weak var dateLbl: UILabel!
-    
-    
     @IBOutlet weak var contentTextView: UITextView!
     
+    var navbarTitle = "Navbar title placeholder"
+    var titleText = "Title placeholder"
+    var dateText = "Date placeholder"
+    var commentText = "Comment placeholder"
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        titleNavbar.title = navbarTitle
+        titleLbl.text = titleText
+        dateLbl.text = dateText
+        contentTextView.text = commentText
+        
+        
         // Do any additional setup after loading the view.
     }
     
-
+        
     /*
     // MARK: - Navigation
 

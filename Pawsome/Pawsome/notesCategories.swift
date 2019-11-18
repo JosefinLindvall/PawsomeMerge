@@ -18,8 +18,9 @@ class NotesCategories{
     
     var title: String
     var date: String
+    var comment: String
     
-    init(title: String, date: String, category: String){
+    init(title: String, date: String, comment:String, category: String){
         
         /*switch(category){
             case "medicalcare":
@@ -42,27 +43,32 @@ class NotesCategories{
         
         self.title = title
         self.date = date
+        self.comment = comment
         }
         
+        /*
         func callMedicalcare(title: String, date: String){
             self.title = title
             self.date = date
-        }
+        }*/
         
+        /*
         func callHealthcare(title: String, date: String){
             self.title = title
             self.date = date
-        }
+        }*/
         
+        /*
         func callActvities(title: String, date: String){
             self.title = title
             self.date = date
-        }
+        }*/
         
+        /*
         func callOther(title: String, date: String){
             self.title = title
             self.date = date
-        }
+        }*/
         
 }
     

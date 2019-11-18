@@ -14,6 +14,9 @@ class NotesCellOfDetailedCategoryTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     
     
+    // COLOR SCHEMA: https://coolors.co/738290-d3d0cb-76aa55-dee5e5-dab49d
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

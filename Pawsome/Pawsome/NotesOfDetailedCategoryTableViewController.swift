@@ -10,12 +10,17 @@ import UIKit
 
 class NotesOfDetailedCategoryTableViewController: UITableViewController {
     
-    var detailedCategoryArray: [NotesCategories] = []
     
+    @IBOutlet weak var navbar: UINavigationItem!
+    
+    
+    var detailedCategoryArray: [NotesCategories] = []
+    var navbarCategoryTitle = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navbar.title = navbarCategoryTitle
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -46,6 +51,29 @@ class NotesOfDetailedCategoryTableViewController: UITableViewController {
         // Configure the cell...
 
         return cell!
+    }
+    
+    // MARK: - Navigation
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    performSegue(withIdentifier: "segueToSpecificNote", sender: indexPath)
+    
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "segueToSpecificNote"{
+            if let nextVC = segue.destination as? SpecificNoteViewController,
+                let index = sender as? IndexPath{
+                nextVC.navbarTitle = navbarCategoryTitle
+                nextVC.titleText = detailedCategoryArray[index.row].title
+                nextVC.dateText = detailedCategoryArray[index.row].date
+                nextVC.commentText = detailedCategoryArray[index.row].comment
+                
+            }
+            
+            
+        }
     }
     
 
@@ -84,14 +112,8 @@ class NotesOfDetailedCategoryTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+  
+    
 
 }

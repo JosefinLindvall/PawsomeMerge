@@ -17,8 +17,9 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="13e-G4-iqs">
                                 <rect key="frame" x="20" y="263" width="177" height="222"/>
-                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.45098039215686275" green="0.50980392156862742" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" red="0.87058823529411766" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Medicalcare"/>
                                 <connections>
                                     <segue destination="tF3-Zr-7jD" kind="show" identifier="segueToNotesOfDetailedView" id="AR0-Sc-9Bp"/>
@@ -26,8 +27,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHj-qd-i4G">
                                 <rect key="frame" x="217" y="263" width="177" height="222"/>
-                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.46274509803921571" green="0.66666666666666663" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" red="0.87058823529999996" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Healthcare"/>
                                 <connections>
                                     <action selector="clickedHealthcare:" destination="haL-ii-fod" eventType="touchUpInside" id="12T-jL-L3c"/>
@@ -35,8 +37,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcE-vY-hB3">
                                 <rect key="frame" x="217" y="505" width="177" height="222"/>
-                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.46274509803921571" green="0.66666666666666663" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" red="0.87058823529999996" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Other"/>
                                 <connections>
                                     <action selector="clickedOther:" destination="haL-ii-fod" eventType="touchUpInside" id="LbM-Zm-G0t"/>
@@ -44,32 +47,34 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsd-V0-K1b">
                                 <rect key="frame" x="20" y="505" width="177" height="222"/>
-                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.46274509803921571" green="0.66666666666666663" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="tintColor" red="0.87058823529999996" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Activities"/>
                                 <connections>
                                     <action selector="clickedActivities:" destination="haL-ii-fod" eventType="touchUpInside" id="jcH-Nf-Rq0"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7W-67-8mU">
-                                <rect key="frame" x="20" y="108" width="374" height="135"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="155"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.87058823529411766" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="jsd-V0-K1b" firstAttribute="top" secondItem="13e-G4-iqs" secondAttribute="bottom" constant="20" id="49K-pl-6mO"/>
                             <constraint firstItem="jsd-V0-K1b" firstAttribute="height" secondItem="BcE-vY-hB3" secondAttribute="height" id="6Ag-P4-fuR"/>
                             <constraint firstItem="BcE-vY-hB3" firstAttribute="width" secondItem="eHj-qd-i4G" secondAttribute="width" id="DQV-vG-B6S"/>
-                            <constraint firstItem="q7W-67-8mU" firstAttribute="top" secondItem="MbN-YP-KHS" secondAttribute="top" constant="20" id="Frq-ho-MQW"/>
-                            <constraint firstItem="q7W-67-8mU" firstAttribute="leading" secondItem="MbN-YP-KHS" secondAttribute="leading" constant="20" id="Gsg-Ba-C3E"/>
+                            <constraint firstItem="q7W-67-8mU" firstAttribute="top" secondItem="MbN-YP-KHS" secondAttribute="top" id="Frq-ho-MQW"/>
+                            <constraint firstItem="q7W-67-8mU" firstAttribute="leading" secondItem="MbN-YP-KHS" secondAttribute="leading" id="Gsg-Ba-C3E"/>
                             <constraint firstItem="BcE-vY-hB3" firstAttribute="top" secondItem="eHj-qd-i4G" secondAttribute="bottom" constant="20" id="KAu-EI-gqB"/>
                             <constraint firstItem="13e-G4-iqs" firstAttribute="top" secondItem="q7W-67-8mU" secondAttribute="bottom" constant="20" id="M3l-nn-UUj"/>
                             <constraint firstItem="BcE-vY-hB3" firstAttribute="leading" secondItem="jsd-V0-K1b" secondAttribute="trailing" constant="20" id="Ndo-S2-Bv1"/>
                             <constraint firstItem="BcE-vY-hB3" firstAttribute="height" secondItem="eHj-qd-i4G" secondAttribute="height" id="Nkm-0L-WAy"/>
-                            <constraint firstItem="MbN-YP-KHS" firstAttribute="trailing" secondItem="q7W-67-8mU" secondAttribute="trailing" constant="20" id="SPa-3E-bCX"/>
+                            <constraint firstItem="MbN-YP-KHS" firstAttribute="trailing" secondItem="q7W-67-8mU" secondAttribute="trailing" id="SPa-3E-bCX"/>
                             <constraint firstItem="MbN-YP-KHS" firstAttribute="bottom" secondItem="BcE-vY-hB3" secondAttribute="bottom" constant="135" id="YSi-9v-OYQ"/>
                             <constraint firstItem="MbN-YP-KHS" firstAttribute="trailing" secondItem="eHj-qd-i4G" secondAttribute="trailing" constant="20" id="apQ-Pu-RM8"/>
                             <constraint firstItem="13e-G4-iqs" firstAttribute="leading" secondItem="MbN-YP-KHS" secondAttribute="leading" constant="20" id="c3c-QD-eFd"/>
@@ -89,7 +94,7 @@
             </objects>
             <point key="canvasLocation" x="992.75362318840587" y="130.58035714285714"/>
         </scene>
-        <!--Notes Of Detailed Category Table View Controller-->
+        <!--Category title-->
         <scene sceneID="hOr-Tj-eNy">
             <objects>
                 <tableViewController id="tF3-Zr-7jD" customClass="NotesOfDetailedCategoryTableViewController" customModule="Pawsome" customModuleProvider="target" sceneMemberID="viewController">
@@ -107,17 +112,20 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Ks4-Yu-OUN">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                            <color key="tintColor" red="0.87058823529999996" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="D0f-Em-Fia">
                                             <rect key="frame" x="0.0" y="50" width="414" height="50"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.85490196078431369" green="0.70588235294117641" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" red="0.87058823529999996" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstItem="Ks4-Yu-OUN" firstAttribute="top" secondItem="CnB-AK-AhA" secondAttribute="top" id="2ji-1r-iHO"/>
                                         <constraint firstItem="D0f-Em-Fia" firstAttribute="top" secondItem="Ks4-Yu-OUN" secondAttribute="bottom" id="H9h-mI-B2M"/>
@@ -133,7 +141,6 @@
                                 <connections>
                                     <outlet property="dateLabel" destination="D0f-Em-Fia" id="c3K-TA-JeO"/>
                                     <outlet property="titleLabel" destination="Ks4-Yu-OUN" id="2ob-83-4zl"/>
-                                    <segue destination="HlV-aH-mfG" kind="show" id="5Dd-kt-fUy"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -142,13 +149,17 @@
                             <outlet property="delegate" destination="tF3-Zr-7jD" id="qzq-0V-Wnc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="NHf-od-Wqh"/>
+                    <navigationItem key="navigationItem" title="Category title" id="NHf-od-Wqh"/>
+                    <connections>
+                        <outlet property="navbar" destination="NHf-od-Wqh" id="m5D-SW-Kf5"/>
+                        <segue destination="HlV-aH-mfG" kind="show" identifier="segueToSpecificNote" id="ymq-zP-ZYL"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5eo-cx-7O5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1869.5652173913045" y="130.58035714285714"/>
         </scene>
-        <!--Title-->
+        <!--Category title-->
         <scene sceneID="4mJ-Ys-RB5">
             <objects>
                 <viewController id="HlV-aH-mfG" customClass="SpecificNoteViewController" customModule="Pawsome" customModuleProvider="target" sceneMemberID="viewController">
@@ -159,25 +170,25 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JkB-dt-4It">
                                 <rect key="frame" x="0.0" y="104" width="414" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tRF-Sc-cqN">
                                 <rect key="frame" x="0.0" y="150" width="414" height="670"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" red="0.85490196078431369" green="0.70588235294117641" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EHu-kE-vfM">
                                 <rect key="frame" x="0.0" y="836" width="414" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.85490196078431369" green="0.70588235294117641" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="JkB-dt-4It" firstAttribute="top" secondItem="Fw1-DM-xsr" secondAttribute="top" constant="16" id="4bx-V7-eG9"/>
                             <constraint firstItem="EHu-kE-vfM" firstAttribute="top" secondItem="tRF-Sc-cqN" secondAttribute="bottom" constant="16" id="KKG-Ll-KEd"/>
@@ -192,7 +203,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fw1-DM-xsr"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="FCA-Pl-nPI"/>
+                    <navigationItem key="navigationItem" title="Category title" id="FCA-Pl-nPI"/>
                     <connections>
                         <outlet property="contentTextView" destination="tRF-Sc-cqN" id="6dJ-hG-2pd"/>
                         <outlet property="dateLbl" destination="EHu-kE-vfM" id="9X7-pz-QSV"/>
