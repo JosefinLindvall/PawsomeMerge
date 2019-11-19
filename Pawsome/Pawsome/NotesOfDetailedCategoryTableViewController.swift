@@ -10,22 +10,23 @@ import UIKit
 
 class NotesOfDetailedCategoryTableViewController: UITableViewController {
     
-    
     @IBOutlet weak var navbar: UINavigationItem!
-    
     
     var detailedCategoryArray: [NotesCategories] = []
     var navbarCategoryTitle = ""
+   
+    var database: DataHandler?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navbar.title = navbarCategoryTitle
+        navbar.title = navbarCategoryTitle 
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
@@ -39,22 +40,26 @@ class NotesOfDetailedCategoryTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return detailedCategoryArray.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? NotesCellOfDetailedCategoryTableViewCell
         
         cell?.titleLabel.text = detailedCategoryArray[indexPath.row].title
         cell?.dateLabel.text = detailedCategoryArray[indexPath.row].date
-        
-        
-        // Configure the cell...
 
         return cell!
     }
     
     // MARK: - Navigation
 
+    
+    @IBAction func newNoteClicked(_ sender: UIButton) {
+        
+        
+        
+    }
+    
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     performSegue(withIdentifier: "segueToSpecificNote", sender: indexPath)
     
@@ -71,21 +76,27 @@ class NotesOfDetailedCategoryTableViewController: UITableViewController {
                 nextVC.commentText = detailedCategoryArray[index.row].comment
                 
             }
+        }
+        
+        if segue.identifier == "segueToNewNote"{
             
+            if let nextVC = segue.destination as? addNewNoteViewController{
+                nextVC.database = database
+            }
             
         }
+        
     }
     
-
-    /*
+    // MARK: - Data handler
+    
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -95,7 +106,7 @@ class NotesOfDetailedCategoryTableViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.

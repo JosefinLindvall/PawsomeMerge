@@ -10,11 +10,10 @@ import Foundation
 
 class NotesCategories{
     
-    var healthcare: [String] = []
-    var medicalcare: [String] = []
-    var activities: [String] = []
-    var other: [String] = []
-    
+    //var healthcare: [String] = []
+    //var medicalcare: [String] = []
+    //var activities: [String] = []
+    //var other: [String] = []
     
     var title: String
     var date: String

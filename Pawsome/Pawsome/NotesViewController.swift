@@ -7,15 +7,17 @@
 //
 
 import UIKit
+import SQLite
 
 class NotesViewController: UIViewController {
-
+    
     var medicalcareArray: [NotesCategories] = []
     var healthcareArray: [NotesCategories] = []
     var activitiesArray: [NotesCategories] = []
     var otherArray: [NotesCategories] = []
     
-    
+    var database = DataHandler()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,31 +40,37 @@ class NotesViewController: UIViewController {
         otherArray.append(NotesCategories(title: "Other placeholder 2", date: "3/4-2015", comment: "Other comment placeholder 1", category: "medicalcare"))
         otherArray.append(NotesCategories(title: "Other placeholder 3", date: "13/11-2017", comment: "Other comment placeholder 1", category: "medicalcare"))
         otherArray.append(NotesCategories(title: "Other placeholder 4 ", date: "13/11-2019", comment: "Other comment placeholder 1", category: "medicalcare"))
-        
-        // Do any additional setup after loading the view.
+
+    }
+    
+    // MARK: - Navigation
+    
+    
+    
+    @IBAction func clickedMedicalcare(_ sender: UIButton) {
+        self.database.setActiveTableName(self.database.medicalcareTableName)
+        self.database.createTable(database.medicalcareTable)
     }
     
     @IBAction func clickedHealthcare(_ sender: UIButton) {
-        
+        self.database.setActiveTableName(self.database.healthcareTableName)
+        self.database.createTable(database.healthcareTable)
         performSegue(withIdentifier: "segueToNotesOfDetailedView", sender: sender)
-        
     }
     
     @IBAction func clickedActivities(_ sender: UIButton) {
-        
+        self.database.setActiveTableName(self.database.acitivitiesTableName)
+        self.database.createTable(database.activitiesTable)
         performSegue(withIdentifier: "segueToNotesOfDetailedView", sender: sender)
-
     }
     
     @IBAction func clickedOther(_ sender: UIButton) {
-        
+        self.database.setActiveTableName(self.database.otherTableName)
+        self.database.createTable(database.otherTable)
         performSegue(withIdentifier: "segueToNotesOfDetailedView", sender: sender)
 
     }
     
-    
-    // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -76,31 +84,30 @@ class NotesViewController: UIViewController {
                     case "Medicalcare":
                         nextVC.detailedCategoryArray = medicalcareArray
                         nextVC.navbarCategoryTitle = buttonPressed
+                        nextVC.database = database
                         break
                     case "Healthcare":
                         nextVC.detailedCategoryArray = healthcareArray
                         nextVC.navbarCategoryTitle = buttonPressed
+                        nextVC.database = database
                         break
                         
                     case "Activities":
                         nextVC.detailedCategoryArray = activitiesArray
                         nextVC.navbarCategoryTitle = buttonPressed
+                        nextVC.database = database
                         break
                     
                     case "Other":
                         nextVC.detailedCategoryArray = otherArray
                         nextVC.navbarCategoryTitle = buttonPressed
+                        nextVC.database = database
                         break
                     
                     default: break
                 }
             }
-        }       
-        
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        }
     }
-    
-
 }
 
