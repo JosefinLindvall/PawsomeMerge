@@ -31,9 +31,9 @@ class ServicesTableViewController: UITableViewController
         
         // Putting in the data (fetch data differently later on)
         
-        veterinarians.append(Service (name : "Vet Kelly" , telephoneNumber : "12345678910" , address : "Paw street 20" , linkToWebsite : "www.kelly.com" ))
-        dogSitters.append(Service (name : "Bruno the dog sitter" , telephoneNumber : "12345678910" , address : "Tail street 20" , linkToWebsite : "www.bruno.com" ))
-        dogGroomers.append(Service (name : "Sara the groomer" , telephoneNumber : "12345678910" , address : "Fur street 20" , linkToWebsite : "www.sara.com" ))
+        veterinarians.append(Service (name : "Vet Kelly" , telephoneNumber : "12345678910" , address : "Paw street 20" , linkToWebsite : "www.kelly.com", email : "kelly@gmail.com"))
+        dogSitters.append(Service (name : "Bruno the dog sitter" , telephoneNumber : "12345678910" , address : "Tail street 20" , linkToWebsite : "www.bruno.com" , email : "bruno@gmail.com"))
+        dogGroomers.append(Service (name : "Sara the groomer" , telephoneNumber : "12345678910" , address : "Fur street 20" , linkToWebsite : "www.sara.com", email : "sara@gmail.com" ))
 
         
         services = [veterinarians, dogSitters, dogGroomers]
