@@ -9,13 +9,18 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
+    
     @IBOutlet weak var NameLabel: UILabel!
+    @IBOutlet weak var DateLabel: UILabel!
+    
     
     var myDogProfile = DogProfile()
     
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
         
@@ -25,7 +30,7 @@ class ProfileViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         NameLabel.text = myDogProfile.name
-        
+        DateLabel.text = myDogProfile.birthDate
     }
 
     
@@ -35,7 +40,7 @@ class ProfileViewController: UIViewController {
               
                 
                     destination.myDogProfile = myDogProfile
-                    
+            
                 //skicka hela objectet
             }
             

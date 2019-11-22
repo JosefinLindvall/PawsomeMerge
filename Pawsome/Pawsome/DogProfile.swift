@@ -11,9 +11,11 @@ import Foundation
 class DogProfile{
     
     var name: String
+    var birthDate: String
     
-    init(name: String = "Name") {
+    init(name: String = "Name", date: String = "dd/mm/yyyy") {
         self.name = name
+        self.birthDate = date
     }
     
     
