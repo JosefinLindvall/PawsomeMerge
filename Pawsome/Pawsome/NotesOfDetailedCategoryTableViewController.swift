@@ -7,20 +7,26 @@
 //
 
 import UIKit
+import SQLite
+
 
 class NotesOfDetailedCategoryTableViewController: UITableViewController {
     
     @IBOutlet weak var navbar: UINavigationItem!
     
+    var database: DataHandler?
+    
     var detailedCategoryArray: [NotesCategories] = []
     var navbarCategoryTitle = ""
-   
-    var database: DataHandler?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navbar.title = navbarCategoryTitle 
+        navbar.title = navbarCategoryTitle
+        
+        
+        
+        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -44,8 +50,34 @@ class NotesOfDetailedCategoryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? NotesCellOfDetailedCategoryTableViewCell
         
-        cell?.titleLabel.text = detailedCategoryArray[indexPath.row].title
-        cell?.dateLabel.text = detailedCategoryArray[indexPath.row].date
+        do{
+            if let activeTable = database?.getActiveTable(),
+                let id = database?.dbId,
+                let title = database?.dbTitle,
+                let date = database?.dbDate,
+                let detailedCategoryNotes = try database?.db.prepare(activeTable){
+                
+                //let values = detailedCategoryNotes[indexPath.row]
+                
+                //for note in detailedCategoryNotes{
+                    
+                    //cell?.titleLabel.text = detailedCategoryNotes[title]
+
+                    cell?.titleLabel.text = detailedCategoryArray[indexPath.row].title
+                    cell?.dateLabel.text = detailedCategoryArray[indexPath.row].date
+                    //print("NoteID: \(note[id]), Title: \(note[title]), Date: \(note[date])")
+                //}
+                
+            }
+            
+            
+        }catch{
+            
+            print(error)
+            
+        }
+        
+       
 
         return cell!
     }

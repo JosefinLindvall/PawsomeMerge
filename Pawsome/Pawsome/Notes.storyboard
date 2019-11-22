@@ -198,17 +198,18 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Note" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbU-ve-oin">
                                 <rect key="frame" x="0.0" y="16" width="414" height="30"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5bb-Zq-zGG">
-                                <rect key="frame" x="16" y="112" width="382" height="34"/>
+                                <rect key="frame" x="16" y="120" width="382" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Comment" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cc2-q7-pbd">
-                                <rect key="frame" x="16" y="162" width="382" height="596"/>
+                                <rect key="frame" x="16" y="170" width="382" height="588"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -224,8 +225,14 @@
                                     <action selector="finishButtonClicked:" destination="WsX-md-GRi" eventType="touchUpInside" id="Dc4-dC-5xq"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GE3-fy-YVB" userLabel="Invalid Credentials">
+                                <rect key="frame" x="0.0" y="54" width="414" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ny-GK-ceK">
-                                <rect key="frame" x="16" y="62" width="382" height="34"/>
+                                <rect key="frame" x="16" y="70" width="382" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -235,7 +242,9 @@
                             <constraint firstItem="8ny-GK-ceK" firstAttribute="leading" secondItem="UT5-KZ-5lW" secondAttribute="leading" constant="16" id="4kp-gB-be8"/>
                             <constraint firstItem="UT5-KZ-5lW" firstAttribute="trailing" secondItem="vbU-ve-oin" secondAttribute="trailing" id="5a0-mj-LDr"/>
                             <constraint firstItem="Xhl-aK-fwu" firstAttribute="bottom" secondItem="UT5-KZ-5lW" secondAttribute="bottom" constant="8" id="BVZ-NB-Edx"/>
+                            <constraint firstItem="8ny-GK-ceK" firstAttribute="top" secondItem="GE3-fy-YVB" secondAttribute="bottom" constant="16" id="Cat-VL-PVP"/>
                             <constraint firstItem="cc2-q7-pbd" firstAttribute="top" secondItem="5bb-Zq-zGG" secondAttribute="bottom" constant="16" id="D8Q-SG-MPa"/>
+                            <constraint firstItem="GE3-fy-YVB" firstAttribute="leading" secondItem="UT5-KZ-5lW" secondAttribute="leading" id="Fvd-iX-wjN"/>
                             <constraint firstItem="vbU-ve-oin" firstAttribute="leading" secondItem="UT5-KZ-5lW" secondAttribute="leading" id="NZG-uF-TAH"/>
                             <constraint firstItem="UT5-KZ-5lW" firstAttribute="trailing" secondItem="cc2-q7-pbd" secondAttribute="trailing" constant="16" id="Ru6-mc-jou"/>
                             <constraint firstItem="Xhl-aK-fwu" firstAttribute="top" secondItem="cc2-q7-pbd" secondAttribute="bottom" constant="16" id="TxY-yJ-EcK"/>
@@ -244,9 +253,10 @@
                             <constraint firstItem="Xhl-aK-fwu" firstAttribute="leading" secondItem="UT5-KZ-5lW" secondAttribute="leading" constant="16" id="d44-qX-Mai"/>
                             <constraint firstItem="5bb-Zq-zGG" firstAttribute="top" secondItem="8ny-GK-ceK" secondAttribute="bottom" constant="16" id="dMH-T2-Nha"/>
                             <constraint firstItem="UT5-KZ-5lW" firstAttribute="trailing" secondItem="8ny-GK-ceK" secondAttribute="trailing" constant="16" id="dgx-Rf-imM"/>
+                            <constraint firstItem="GE3-fy-YVB" firstAttribute="top" secondItem="vbU-ve-oin" secondAttribute="bottom" constant="8" id="jkX-Ls-xFR"/>
                             <constraint firstItem="UT5-KZ-5lW" firstAttribute="trailing" secondItem="5bb-Zq-zGG" secondAttribute="trailing" constant="16" id="km6-Qk-StF"/>
                             <constraint firstItem="cc2-q7-pbd" firstAttribute="leading" secondItem="UT5-KZ-5lW" secondAttribute="leading" constant="16" id="m1p-JF-DuQ"/>
-                            <constraint firstItem="8ny-GK-ceK" firstAttribute="top" secondItem="vbU-ve-oin" secondAttribute="bottom" constant="16" id="s70-d2-QtZ"/>
+                            <constraint firstItem="UT5-KZ-5lW" firstAttribute="trailing" secondItem="GE3-fy-YVB" secondAttribute="trailing" id="rUf-Ck-oiz"/>
                             <constraint firstItem="vbU-ve-oin" firstAttribute="top" secondItem="UT5-KZ-5lW" secondAttribute="top" constant="16" id="xKK-S4-PLt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UT5-KZ-5lW"/>
@@ -255,6 +265,7 @@
                         <outlet property="inputComment" destination="cc2-q7-pbd" id="uqE-2Z-iaW"/>
                         <outlet property="inputDate" destination="5bb-Zq-zGG" id="9s7-77-pq5"/>
                         <outlet property="inputTitle" destination="8ny-GK-ceK" id="a6G-Af-YOa"/>
+                        <outlet property="invalidInput" destination="GE3-fy-YVB" id="9xa-lV-523"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOF-DD-JD3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

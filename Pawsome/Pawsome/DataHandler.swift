@@ -59,9 +59,23 @@ class DataHandler{
             print(error)
         }
         self.setActiveTable(tableName)
-        print(self.getActiveTable())
+    }
+    
+    func insertData(inputTitle: String?, inputDate: String?, inputComment: String?){
         
-        print(getActiveTableName())
+        if let title = inputTitle,
+            let date = inputDate,
+            let comment = inputComment,
+            let insertNote = self.getActiveTable()?.insert(self.dbTitle <- title, self.dbDate <- date, self.dbComment <- comment){
+            /*,
+            let tryNote = database?.getActiveTable()?.insert((database?.dbTitle <- inputTitle.text!)!, (database?.dbDate <- inputDate.text!)!, (database?.dbComment <- inputComment.text)!)*/
+            do{
+                try self.db.run(insertNote)
+                print("Inserted Note!")
+            }catch{
+                print(error)
+            }
+        }
     }
     
     func setActiveTableName(_ tableName: String){

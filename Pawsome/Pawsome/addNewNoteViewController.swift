@@ -12,6 +12,7 @@ import SQLite
 class addNewNoteViewController: UIViewController {
 
     
+    @IBOutlet weak var invalidInput: UILabel!
     
     @IBOutlet weak var inputTitle: UITextField!
     
@@ -32,25 +33,19 @@ class addNewNoteViewController: UIViewController {
     }
 
     @IBAction func finishButtonClicked(_ sender: UIButton) {
-        
-        print(database?.getActiveTable())
-        
-        if let title = inputTitle.text,
-            let date = inputDate.text,
-            let comment = inputComment.text,
-            let dbTitle = database?.dbTitle,
-            let dbDate = database?.dbDate,
-            let dbComment = database?.dbComment,
-            let insertNote = database?.getActiveTable()?.insert(dbTitle <- title, dbDate <- date, dbComment <- comment){
-            
-            do{
-                try self.database?.db.run(insertNote)
-                print("Inserted Note!")
-            }catch{
-                print(error)
-            }
+        if inputTitle.text == ""{
+            invalidInput.text = "Add a title!"
         }
-        dismiss(animated: true, completion: nil)
+        else if inputDate.text == ""{
+            invalidInput.text = "Add the date!"
+        }
+        else if inputComment.text == ""{
+            invalidInput.text = "You need to enter a comment!"
+        }
+        else{
+            database?.insertData(inputTitle: inputTitle.text, inputDate: inputDate.text, inputComment: inputComment.text)
+            dismiss(animated: true, completion: nil)
+        }
     }
     /*
     // MARK: - Navigation
