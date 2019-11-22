@@ -26,8 +26,6 @@ class NotesOfDetailedCategoryTableViewController: UITableViewController {
         
         
         
-        
-        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -35,6 +33,14 @@ class NotesOfDetailedCategoryTableViewController: UITableViewController {
         self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        detailedCategoryArray = (database?.loadData())!
+        tableView.reloadData()
+        
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -47,38 +53,14 @@ class NotesOfDetailedCategoryTableViewController: UITableViewController {
         return detailedCategoryArray.count
     }
     
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? NotesCellOfDetailedCategoryTableViewCell
-        
-        do{
-            if let activeTable = database?.getActiveTable(),
-                let id = database?.dbId,
-                let title = database?.dbTitle,
-                let date = database?.dbDate,
-                let detailedCategoryNotes = try database?.db.prepare(activeTable){
-                
-                //let values = detailedCategoryNotes[indexPath.row]
-                
-                //for note in detailedCategoryNotes{
-                    
-                    //cell?.titleLabel.text = detailedCategoryNotes[title]
 
                     cell?.titleLabel.text = detailedCategoryArray[indexPath.row].title
                     cell?.dateLabel.text = detailedCategoryArray[indexPath.row].date
-                    //print("NoteID: \(note[id]), Title: \(note[title]), Date: \(note[date])")
-                //}
-                
-            }
-            
-            
-        }catch{
-            
-            print(error)
-            
-        }
         
-       
-
         return cell!
     }
     

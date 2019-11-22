@@ -78,6 +78,29 @@ class DataHandler{
         }
     }
     
+    func loadData() -> [NotesCategories]?{
+        var detailedCategoryArray: [NotesCategories] = []
+        
+        do{
+            if let activeTable = self.getActiveTable(),
+                let activeTableName = self.getActiveTableName(),
+                let notes = try self.db?.prepare(activeTable){
+        
+                    for note in notes{
+                        detailedCategoryArray.append(NotesCategories(title: note[dbTitle], date: note[dbDate], comment: note[dbComment], category: activeTableName))
+                    }
+                }
+        }catch{
+                
+            print(error)
+                
+        }
+        
+        
+        return detailedCategoryArray
+        
+    }
+    
     func setActiveTableName(_ tableName: String){
         
         self.activeTableName = tableName
