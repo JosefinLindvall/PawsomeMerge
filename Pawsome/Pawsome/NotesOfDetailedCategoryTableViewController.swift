@@ -24,12 +24,6 @@ class NotesOfDetailedCategoryTableViewController: UITableViewController {
 
         navbar.title = navbarCategoryTitle
         
-        
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
@@ -53,8 +47,6 @@ class NotesOfDetailedCategoryTableViewController: UITableViewController {
         return detailedCategoryArray.count
     }
     
-    
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? NotesCellOfDetailedCategoryTableViewCell
 
@@ -65,12 +57,8 @@ class NotesOfDetailedCategoryTableViewController: UITableViewController {
     }
     
     // MARK: - Navigation
-
     
     @IBAction func newNoteClicked(_ sender: UIButton) {
-        
-        
-        
     }
     
     
@@ -84,6 +72,8 @@ class NotesOfDetailedCategoryTableViewController: UITableViewController {
         if segue.identifier == "segueToSpecificNote"{
             if let nextVC = segue.destination as? SpecificNoteViewController,
                 let index = sender as? IndexPath{
+                nextVC.database = database
+                nextVC.noteID = detailedCategoryArray[index.row].id
                 nextVC.navbarTitle = navbarCategoryTitle
                 nextVC.titleText = detailedCategoryArray[index.row].title
                 nextVC.dateText = detailedCategoryArray[index.row].date
@@ -97,9 +87,7 @@ class NotesOfDetailedCategoryTableViewController: UITableViewController {
             if let nextVC = segue.destination as? addNewNoteViewController{
                 nextVC.database = database
             }
-            
         }
-        
     }
     
     // MARK: - Data handler
@@ -114,11 +102,11 @@ class NotesOfDetailedCategoryTableViewController: UITableViewController {
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            database?.deleteRow(detailedCategoryArray[indexPath.row].id)
+            detailedCategoryArray.remove(at: indexPath.row)
             // Delete the row from the data source
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     
 

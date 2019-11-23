@@ -32,6 +32,12 @@ class addNewNoteViewController: UIViewController {
 
     }
 
+    // MARK: - Navigation
+    
+    @IBAction func dismissViewButtonClicked(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func finishButtonClicked(_ sender: UIButton) {
         if inputTitle.text == ""{
             invalidInput.text = "Add a title!"
@@ -48,7 +54,6 @@ class addNewNoteViewController: UIViewController {
         }
     }
     /*
-    // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -85,19 +85,64 @@ class DataHandler{
             if let activeTable = self.getActiveTable(),
                 let activeTableName = self.getActiveTableName(),
                 let notes = try self.db?.prepare(activeTable){
-        
                     for note in notes{
-                        detailedCategoryArray.append(NotesCategories(title: note[dbTitle], date: note[dbDate], comment: note[dbComment], category: activeTableName))
+                        detailedCategoryArray.append(NotesCategories(id: note[dbId], title: note[dbTitle], date: note[dbDate], comment: note[dbComment], category: activeTableName))
                     }
                 }
         }catch{
-                
             print(error)
-                
+        }
+        return detailedCategoryArray
+    }
+    
+    func deleteRow(_ id: Int){
+        if let note = self.getActiveTable()?.filter(self.dbId == id){
+            let deleteNote = note.delete()
+            do{
+                try self.db.run(deleteNote)
+            }catch{
+                print(error)
+            }
+        }
+    }
+    
+    func updateData(_ id: Int, _ newValue: String, _ type: String){
+        
+        let dbDataType: Expression<String>? = identifyDatatype(type)
+        
+        if(dbDataType == nil){
+            print("ERROR")
         }
         
+        else{
+            if let note = self.getActiveTable()?.filter(self.dbId == id){
+                    
+                let updateNote = note.update([(dbDataType! <- newValue)])
+                do{
+                    try self.db.run(updateNote)
+                }catch{
+                    print(error)
+                }
+            }
+        }
         
-        return detailedCategoryArray
+    }
+    
+    func identifyDatatype(_ type: String) -> Expression<String>?{
+        
+        switch(type){
+            
+        case "title":
+            return self.dbTitle
+            
+        case "date":
+            return self.dbDate
+        
+        case "comment":
+            return self.dbComment
+            
+        default: return nil
+        }
         
     }
     
@@ -118,5 +163,7 @@ class DataHandler{
     func getActiveTable() -> Table?{
         return self.activeTable
     }
+    
+    
     
 }

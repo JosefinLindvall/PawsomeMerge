@@ -10,65 +10,18 @@ import Foundation
 
 class NotesCategories{
     
-    //var healthcare: [String] = []
-    //var medicalcare: [String] = []
-    //var activities: [String] = []
-    //var other: [String] = []
-    
     var title: String
     var date: String
     var comment: String
+    var id: Int
     
-    init(title: String, date: String, comment:String, category: String){
-        
-        /*switch(category){
-            case "medicalcare":
-                callMedicalcare(title: , date: )
-                break
-            
-            case "healthcare":
-                callHealthcare(title: , date: )
-                break
-            
-            case "activities":
-                    callActvities(title: , date: )
-            
-            case "other":
-                callOther(title: , date: )
-                break
-            
-            default: break
-         */
+    init(id: Int, title: String, date: String, comment:String, category: String){
         
         self.title = title
         self.date = date
         self.comment = comment
-        }
-        
-        /*
-        func callMedicalcare(title: String, date: String){
-            self.title = title
-            self.date = date
-        }*/
-        
-        /*
-        func callHealthcare(title: String, date: String){
-            self.title = title
-            self.date = date
-        }*/
-        
-        /*
-        func callActvities(title: String, date: String){
-            self.title = title
-            self.date = date
-        }*/
-        
-        /*
-        func callOther(title: String, date: String){
-            self.title = title
-            self.date = date
-        }*/
-        
+        self.id = id
+        }        
 }
     
     

@@ -7,26 +7,62 @@
 //
 
 import UIKit
+import SQLite
 
-class SpecificNoteViewController: UIViewController {
+class SpecificNoteViewController: UIViewController, UITextViewDelegate {
 
+    @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var titleNavbar: UINavigationItem!
-    @IBOutlet weak var titleLbl: UILabel!
-    @IBOutlet weak var dateLbl: UILabel!
-    @IBOutlet weak var contentTextView: UITextView!
+    
+    @IBOutlet weak var commentTextView: UITextView!
+
+    @IBOutlet weak var dateField: UITextField!
+
+    var database: DataHandler?
     
     var navbarTitle = "Navbar title placeholder"
     var titleText = "Title placeholder"
     var dateText = "Date placeholder"
     var commentText = "Comment placeholder"
+    var noteID: Int!
+    
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         titleNavbar.title = navbarTitle
-        titleLbl.text = titleText
-        dateLbl.text = dateText
-        contentTextView.text = commentText
+        titleField.text = titleText
+        dateField.text = dateText
+        commentTextView.text = commentText
+        commentTextView.delegate = self
     }
+    
+    
+    
+    @IBAction func titleClicked(_ sender: UITextField) {
+            
+        if let title = titleField.text{
+            database?.updateData(noteID, title, "title")
+        }
+        
+    }
+    
+    @IBAction func dateClicked(_ sender: Any) {
+        if let date = dateField.text{
+             database?.updateData(noteID, date, "date")
+         }
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        
+        if let comment = commentTextView.text{
+             database?.updateData(noteID, comment, "comment")
+         }
+    }
+    
+    
+    
+    
 }
