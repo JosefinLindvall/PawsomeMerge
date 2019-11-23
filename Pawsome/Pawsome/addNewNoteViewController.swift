@@ -9,13 +9,13 @@
 import UIKit
 import SQLite
 
-class addNewNoteViewController: UIViewController {
-
+class addNewNoteViewController: UIViewController, UIPickerViewDelegate{
+    
+    let datePicker = UIDatePicker()
     
     @IBOutlet weak var invalidInput: UILabel!
     
     @IBOutlet weak var inputTitle: UITextField!
-    
     
     @IBOutlet weak var inputDate: UITextField!
     
@@ -27,9 +27,11 @@ class addNewNoteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+                
+        datePicker.datePickerMode = .date
+        inputDate.inputView = datePicker
         
         
-
     }
 
     // MARK: - Navigation
@@ -37,6 +39,16 @@ class addNewNoteViewController: UIViewController {
     @IBAction func dismissViewButtonClicked(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func inputDateEditingDidEnd(_ sender: Any) {
+        
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "dd-MM-YYYY"
+        
+        inputDate.text = timeFormatter.string(from: datePicker.date)
+        
+    }
+    
     
     @IBAction func finishButtonClicked(_ sender: UIButton) {
         if inputTitle.text == ""{
