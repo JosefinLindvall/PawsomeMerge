@@ -29,18 +29,23 @@ class ServicesTableViewController: UITableViewController
         
         self.navigationItem.title = "Services"
         
-        // Putting in the data (fetch data differently later on)
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        veterinarians.append(Service (name : "Vet Kelly" , telephoneNumber : "12345678910" , address : "Paw street 20" , linkToWebsite : "www.kelly.com", email : "kelly@gmail.com"))
-        dogSitters.append(Service (name : "Bruno the dog sitter" , telephoneNumber : "12345678910" , address : "Tail street 20" , linkToWebsite : "www.bruno.com" , email : "bruno@gmail.com"))
-        dogGroomers.append(Service (name : "Sara the groomer" , telephoneNumber : "12345678910" , address : "Fur street 20" , linkToWebsite : "www.sara.com", email : "sara@gmail.com" ))
+        // Fetch data from database here, put the data in the arrays veterinarians, dogSitters, dogGroomers
+        
+        veterinarians.append(Service ("veterinarian", "Vet Kelly" , "12345678910" , "Paw street 20" , "www.kelly.com", "kelly@gmail.com"))
+        dogSitters.append(Service ("dogSitter", "Bruno the dog sitter" , "12345678910" ,"Tail street 20" ,  "www.bruno.com" , "bruno@gmail.com"))
+        dogGroomers.append(Service ("dogGroomer", "Sara the groomer" , "12345678910" , "Fur street 20" , "www.sara.com", "sara@gmail.com" ))
 
         
         services = [veterinarians, dogSitters, dogGroomers]
-        print(services.count)
-        print(services[0])
+        
     }
     
+    override func viewWillAppear(_ animated: Bool)
+    {
+        tableView.reloadData()
+    }
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
     override func numberOfSections(in tableView: UITableView) -> Int
@@ -103,9 +108,40 @@ class ServicesTableViewController: UITableViewController
            }
          }
         
+      
+    
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+        
+    // Override to support conditional editing of the table view.
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    {
+        // Return false if you do not want the specified item to be editable.
+        return true
+    }
+    
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    
+    // Override to support editing the table view.
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if editingStyle == .delete
+        {
+            // Delete the row from the data source
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
         
         
-        
+    }
+   
+    
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    
+    
 }
 
 

@@ -10,76 +10,65 @@ import UIKit
 
 class ServiceDetailViewController: UIViewController
 {
-    //Name of service
+    
     @IBOutlet weak var nameOfServiceLabel: UILabel!
     
-    // Telephone number of service
+    
     @IBOutlet weak var telNrForServiceLabel: UILabel!
     
-    //Address of service
+  
     @IBOutlet weak var addressOfServiceLabel: UILabel!
     
-    //Link to website of service
+   
     @IBOutlet weak var websiteOfServiceLabel: UILabel!
     
-    //Email of service
+   
     @IBOutlet weak var emailOfServiceLabel: UILabel!
     
+
+    @IBOutlet weak var editButton: UIBarButtonItem!
     
     
+    //This data comes either from ServiceTableViewController or from EditServiceViewController (not fetched in database)
+    var service = Service()
     
-    //Variable containing data
-    var service : Service?
     
-    
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-    
-           
-        // Name of service label
-        nameOfServiceLabel.attributedText = getTextToBePutInServiceLabel("Name: ", "name")
-        
-        telNrForServiceLabel.attributedText = getTextToBePutInServiceLabel("Tel: ", "telephoneNumber")
-        
-        addressOfServiceLabel.attributedText = getTextToBePutInServiceLabel("Address: ", "address")
-        
-        websiteOfServiceLabel.attributedText = getTextToBePutInServiceLabel("Website: ", "linkToWebsite")
-        
-        emailOfServiceLabel.attributedText = getTextToBePutInServiceLabel("Email: ", "email")
-        
-        
-        
-        /*let boldTextOnNameOfServiceLabel = "Name: "
-        let attributesForboldTextOnNameOfServiceLabel = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20)]
-        let attributedStringOnNameOfServiceLabel = NSMutableAttributedString(string:boldTextOnNameOfServiceLabel, attributes:attributesForboldTextOnNameOfServiceLabel)
-
-        if self.service?.name != nil
-        {
-            let textWithName = self.service?.name
-            let stringWithName = NSMutableAttributedString(string: textWithName!) // ok to have exclamaiton mark here? Is there a better solution?
-            attributedStringOnNameOfServiceLabel.append(stringWithName)
-            nameOfServiceLabel.attributedText = attributedStringOnNameOfServiceLabel
-        } */
-        
-        
-        
-        
-        //  Telephone number of service label (Continue here next time)
-        
-        
-        
           
     }
     
+    
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+      
+        nameOfServiceLabel.attributedText = getTextToBePutInServiceLabel("Name: ", "name")
+            
+        telNrForServiceLabel.attributedText = getTextToBePutInServiceLabel("Tel: ", "telephoneNumber")
+            
+        addressOfServiceLabel.attributedText = getTextToBePutInServiceLabel("Address: ", "address")
+            
+        websiteOfServiceLabel.attributedText = getTextToBePutInServiceLabel("Website: ", "linkToWebsite")
+            
+        emailOfServiceLabel.attributedText = getTextToBePutInServiceLabel("Email: ", "email")
+    }
+    
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     
     func  getTextToBePutInServiceLabel (_ boldText: String, _ valueInService: String) -> NSMutableAttributedString
     {
         let attributesForboldText = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20)]
         let attributedString = NSMutableAttributedString(string:boldText, attributes:attributesForboldText)
 
-        let normalText = self.service?.getAttributeFromString(valueInService)
+        let normalText = self.service.getAttributeFromString(valueInService)
         
         if normalText != nil
         {
@@ -90,9 +79,33 @@ class ServiceDetailViewController: UIViewController
         
         else
         {
-            return NSMutableAttributedString(string: "(There is no data for this fild)")
+            return NSMutableAttributedString(string: "(There is no data for this field)")
         }
     }
+    
+    
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    @IBAction func editButtonClicked (_sender : UIBarButtonItem)
+    {
+        performSegue(withIdentifier: "segueToEditServiceViewController", sender: editButton)
+        
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        
+       if segue.identifier == "segueToEditServiceViewController" ,
+          let segueTo =  segue.destination as? EditServiceViewController
+       {
+            segueTo.service = service
+       }
+        
+    }
+    
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     
 }

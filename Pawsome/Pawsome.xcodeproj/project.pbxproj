@@ -21,8 +21,11 @@
 		18B41535237194F500549C13 /* PawsomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B41534237194F500549C13 /* PawsomeUITests.swift */; };
 		4419FFEF2375B2DB00CCA508 /* ServicesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4419FFEE2375B2DB00CCA508 /* ServicesTableViewController.swift */; };
 		4419FFF12375BD8F00CCA508 /* cellInServicesTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4419FFF02375BD8F00CCA508 /* cellInServicesTable.swift */; };
+		44238391238D6D23005774C0 /* ServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44238390238D6D23005774C0 /* ServiceTests.swift */; };
 		444810A42387062F00CF9E9A /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444810A32387062F00CF9E9A /* AddServiceViewController.swift */; };
+		448BF2A72389C08A00EE8283 /* EditServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448BF2A62389C08A00EE8283 /* EditServiceViewController.swift */; };
 		44B60503237D60FC00B18A39 /* ServiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B60502237D60FC00B18A39 /* ServiceDetailViewController.swift */; };
+		44EFA578238978730086ED56 /* InvalidInputHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44EFA577238978730086ED56 /* InvalidInputHandler.swift */; };
 		44F87B34237C3D5E003D22DB /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F87B33237C3D5E003D22DB /* Service.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,8 +67,11 @@
 		18B41536237194F500549C13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4419FFEE2375B2DB00CCA508 /* ServicesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesTableViewController.swift; sourceTree = "<group>"; };
 		4419FFF02375BD8F00CCA508 /* cellInServicesTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellInServicesTable.swift; sourceTree = "<group>"; };
+		44238390238D6D23005774C0 /* ServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTests.swift; sourceTree = "<group>"; };
 		444810A32387062F00CF9E9A /* AddServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddServiceViewController.swift; sourceTree = "<group>"; };
+		448BF2A62389C08A00EE8283 /* EditServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditServiceViewController.swift; sourceTree = "<group>"; };
 		44B60502237D60FC00B18A39 /* ServiceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDetailViewController.swift; sourceTree = "<group>"; };
+		44EFA577238978730086ED56 /* InvalidInputHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidInputHandler.swift; sourceTree = "<group>"; };
 		44F87B33237C3D5E003D22DB /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +139,8 @@
 				44F87B33237C3D5E003D22DB /* Service.swift */,
 				44B60502237D60FC00B18A39 /* ServiceDetailViewController.swift */,
 				444810A32387062F00CF9E9A /* AddServiceViewController.swift */,
+				44EFA577238978730086ED56 /* InvalidInputHandler.swift */,
+				448BF2A62389C08A00EE8283 /* EditServiceViewController.swift */,
 			);
 			path = Pawsome;
 			sourceTree = "<group>";
@@ -142,6 +150,7 @@
 			children = (
 				18B41529237194F500549C13 /* PawsomeTests.swift */,
 				18B4152B237194F500549C13 /* Info.plist */,
+				44238390238D6D23005774C0 /* ServiceTests.swift */,
 			);
 			path = PawsomeTests;
 			sourceTree = "<group>";
@@ -289,7 +298,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				448BF2A72389C08A00EE8283 /* EditServiceViewController.swift in Sources */,
 				18B4151A237194F400549C13 /* Pawsome.xcdatamodeld in Sources */,
+				44EFA578238978730086ED56 /* InvalidInputHandler.swift in Sources */,
 				44F87B34237C3D5E003D22DB /* Service.swift in Sources */,
 				18B41514237194F400549C13 /* ViewController.swift in Sources */,
 				18B41510237194F400549C13 /* AppDelegate.swift in Sources */,
@@ -306,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18B4152A237194F500549C13 /* PawsomeTests.swift in Sources */,
+				44238391238D6D23005774C0 /* ServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
