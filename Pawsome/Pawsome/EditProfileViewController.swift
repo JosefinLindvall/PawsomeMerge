@@ -15,6 +15,7 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var DateField: UITextField!
     @IBOutlet weak var GenderField: UITextField!
     @IBOutlet weak var BreedField: UITextField!
+    @IBOutlet weak var InvalidInputLabel: UILabel!
     
     
     private var datePicker: UIDatePicker?
@@ -81,11 +82,17 @@ class EditProfileViewController: UIViewController, UIPickerViewDelegate, UIPicke
 	
 
     @IBAction func saveProfile(_ sender: Any) {
-        myDogProfile.name = NameField.text!
-        myDogProfile.birthDate = DateField.text!
-        myDogProfile.gender = GenderField.text!
-        myDogProfile.breed = BreedField.text!
-        self.navigationController?.popViewController(animated: true)
+        
+        if NameField.text == "" {
+            InvalidInputLabel.text = "Must enter name"
+        }
+        else {
+            myDogProfile.name = NameField.text!
+            myDogProfile.birthDate = DateField.text!
+            myDogProfile.gender = GenderField.text!
+            myDogProfile.breed = BreedField.text!
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     

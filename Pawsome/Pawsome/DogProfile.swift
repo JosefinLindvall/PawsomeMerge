@@ -16,7 +16,7 @@ class DogProfile{
     var breed: String
     var image: UIImage?
     
-    init(name: String = "Name", date: String = "dd/mm/yyyy", gender: String = "gender", breed: String = "breed", image: String = "paw") {
+    init(name: String = "Name", date: String = "", gender: String = "", breed: String = "", image: String = "paw") {
         self.name = name
         self.birthDate = date
         self.gender = gender
